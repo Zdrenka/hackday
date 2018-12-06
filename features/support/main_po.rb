@@ -15,6 +15,6 @@ class ProductionPage
   include PageObject
 
   element(:toolbar_title, class: "am-toolbar__title")
-  element(:content_button, class: "am-respository__label", index: 0)
+  element(:content_button, class: "am-repository__label", index: 0)
   element(:slot_button, class: "am-repository__label", index: 1)
 end
