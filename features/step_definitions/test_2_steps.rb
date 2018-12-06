@@ -1,4 +1,4 @@
-When("I navigate to {string}") do |string|
+When("I navigate to Production") do
 
   masthead = MastheadPage.new(@browser)
   masthead.production_element.wait_until(&:present?)
