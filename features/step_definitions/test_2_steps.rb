@@ -1,4 +1,4 @@
-When("I navigate to {string}") do |string|
+When("I navigate to Production") do
 
   masthead = MastheadPage.new(@browser)
   masthead.production_element.wait_until(&:present?)
@@ -12,8 +12,6 @@ Then("the Production Page toolbar title is {string}") do |expected_text|
 
   production = ProductionPage.new(@browser)
   production.content_button_element.wait_until(&:present?)
-
-  binding.pry
   expect(production.toolbar_title).to eq(expected_text)
 
 end
