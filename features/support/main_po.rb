@@ -20,4 +20,8 @@ class ProductionPage
   element(:toolbar_title, css: ".md-toolbar-tools .am-toolbar__title")
   element(:content_button, css: ".am-repository__label", index: 0)
   element(:slot_button, css: ".am-repository__label", index: 1)
+  element(:create_content_button, class: "md-primary")
+  element(:hackaday_content_type, class: "content-type-card", index: 14)
+  element(:save_button, class: "am-split-button--left")
+
 end
