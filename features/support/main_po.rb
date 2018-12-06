@@ -14,7 +14,7 @@ end
 class ProductionPage
   include PageObject
 
-  element(:toolbar_title, class: "am-toolbar__title")
-  element(:content_button, class: "am-respository__label", index: 0)
-  element(:slot_button, class: "am-repository__label", index: 1)
+  element(:toolbar_title, css: ".md-toolbar-tools .am-toolbar__title")
+  element(:content_button, css: ".am-repository__label", index: 0)
+  element(:slot_button, css: ".am-repository__label", index: 1)
 end
