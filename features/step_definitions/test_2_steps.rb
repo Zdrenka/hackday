@@ -11,7 +11,7 @@ end
 Then("the Production Page toolbar title is {string}") do |expected_text|
 
   production = ProductionPage.new(@browser)
-  # binding.pry
+  binding.pry
   production.content_button.wait_until(&:present?)
 
   expect(production.toolbar_title).to eq(expected_text)
