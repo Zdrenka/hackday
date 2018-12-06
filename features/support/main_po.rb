@@ -23,5 +23,19 @@ class ProductionPage
   element(:create_content_button, class: "md-primary")
   element(:hackaday_content_type, class: "content-type-card", index: 14)
   element(:save_button, class: "am-split-button--left")
+end
 
+class CreateEventModal
+  include PageObject
+
+  element(:modal, css: "md-dialog")
+  text_field(:name, name: "name")
+  text_field(:attachments, name: "brief")
+  text_area(:comments, name: "comment")
+  button(:cancel, css: "md-dialog-actions > button", index: 0)
+  button(:save, css: "md-dialog-actions > button", index: 1)
+  button(:save_open, css: "md-dialog-actions > button", index: 2)
+end
+
+class Planning
 end
