@@ -29,11 +29,12 @@ Then("the event modal is open") do
 end
 
 When("the event fields are populated the save and save open buttons are enabled") do
-
+  
+  @create_event_modal.name_element.wait_until(&:present?)
+  @create_event_modal.attachments_element.wait_until(&:present?)
   @create_event_modal.name = "auto_name"
   @create_event_modal.attachments = "http://www.autoattachments.com"
   @create_event_modal.comments = "auto_comments"
-
   expect(@create_event_modal.save_element.enabled?).to be(true)
   expect(@create_event_modal.save_open_element.enabled?).to be(true)
 end
